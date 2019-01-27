@@ -1,0 +1,25 @@
+<div fxLayout="column">
+
+  <form [formGroup]="loginForm">
+    <div fxLayout="column" fxFlex="50" fxLayoutGap="10px">
+
+      <mat-form-field appearance="outline">
+        <mat-label>Username / Email</mat-label>
+        <input matInput placeholder="" required formControlName="username" name="input-text-username">
+        <mat-icon matSuffix>account_circle</mat-icon>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Password</mat-label>
+        <input matInput placeholder="" type="password" required formControlName="password" name="input-text-password">
+        <mat-icon matSuffix>vpn_key</mat-icon>
+      </mat-form-field>
+
+      <div fxLayout="row" fxLayoutGap="10px" fxLayoutAlign="center center">
+        <button mat-raised-button color="primary" (click)="loginUser('')">Login</button>
+        <button mat-raised-button color="warn" (click)="''">Sign Up</button>
+      </div>
+
+    </div>
+  </form>
+</div>

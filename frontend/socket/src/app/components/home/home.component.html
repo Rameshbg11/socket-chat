@@ -1,0 +1,16 @@
+<p>
+  home works!
+</p>
+
+<mat-toolbar color="primary">Chat Area</mat-toolbar>
+<div>
+  <div fxLayout="column" *ngFor="let msg of textContent" fxLayoutGap="6px">
+    <mat-card style="margin-bottom:6px">
+      {{msg}}
+    </mat-card>
+  </div>
+  <mat-form-field>
+    <input matInput type="text" [(ngModel)]="currentMsg"  placeholder="Type here">
+  </mat-form-field>
+  <mat-icon (click)="msgPush()">send</mat-icon>
+</div>
