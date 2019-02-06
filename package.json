@@ -20,7 +20,8 @@
     "nodemon": "^1.18.9",
     "passport": "^0.4.0",
     "passport-jwt": "^4.0.0",
-    "passport-local": "^1.0.0"
+    "passport-local": "^1.0.0",
+    "socket.io": "^2.2.0"
   },
   "author": "Ramesh G",
   "license": "ISC"
