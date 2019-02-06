@@ -2,15 +2,28 @@
   home works!
 </p>
 
+
+<div *ngFor="let item of messageArray">
+  <p>{{item.user}} joined {{item.message}}</p>
+
+</div>
 <mat-toolbar color="primary">Chat Area</mat-toolbar>
 <div>
-  <div fxLayout="column" *ngFor="let msg of textContent" fxLayoutGap="6px">
-    <mat-card style="margin-bottom:6px">
-      {{msg}}
-    </mat-card>
+  <div fxLayout="column" *ngFor="let m of textContent">
+    <div fxLayout="row" fxFlex="100" >
+      <mat-card style="background-color:#ded0d0;width:100%;margin-bottom:6px;">
+        {{m.msg}}
+        <div fxLayout="row" fxLayoutAlign="end center">
+          <p style="font-size: 12px;">{{m.time | date:'shortTime'}}</p>
+        </div>
+      </mat-card>
+    </div>
+
   </div>
   <mat-form-field>
-    <input matInput type="text" [(ngModel)]="currentMsg"  placeholder="Type here">
+    <input matInput type="text" [(ngModel)]="currentMsg" placeholder="Type here">
   </mat-form-field>
   <mat-icon (click)="msgPush()">send</mat-icon>
 </div>
+
+<button mat-raised (click)="join()">Click</button>
